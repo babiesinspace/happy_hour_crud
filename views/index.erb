@@ -1,0 +1,11 @@
+<% @attendees.each do |a| %>
+
+<a href="/attendees/<%= a.id %>"><h1><%= a.first %> <%= a.last %></h1></a>
+
+<p><%= a.age %></p>
+
+<p>Likes Beer: <%= a.likes_beer %></p>
+
+<a href="/attendees/<%= a.id %>">Edit/Delete</a>
+
+<% end %>

@@ -1,0 +1,11 @@
+<% @happyhours.each do |h| %>
+
+<a href="/happyhours/<%= h.id %>"><h1><%= h.name %></h1></a>
+
+<p><%= h.location %></p>
+
+<p>Capacity: <%= h.capacity %></p>
+
+<a href="/happyhours/<%= h.id %>">Edit/Delete</a>
+
+<% end %>

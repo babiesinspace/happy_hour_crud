@@ -1,0 +1,13 @@
+<a href="/attendees/<%= @attendee.id %>"><h1><%= @attendee.first %> <%= @attendee.last %></h1></a>
+
+<form action="/attendees/<%= @attendee.id %>" method="POST">
+	<input type="hidden" name="_method" value="PUT">
+	<input type="text" name="age" value="<%= @attendee.age %>">
+	<input type="text" name="likes_beer" value="<%= @attendee.likes_beer %>">
+	<button type="submit">Edit</button>
+</form>
+
+<form action="/attendees/<%= @attendee.id %>" method="POST">
+	<input type="hidden" name="_method" value="DELETE">
+	<button type="submit">Delete</button>
+</form>

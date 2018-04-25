@@ -1,0 +1,13 @@
+<a href="/happyhours/<%= @happyhour.id %>"><h1><%= @happyhour.name %></h1></a>
+
+<form action="/happyhours/<%= @happyhour.id %>" method="POST">
+	<input type="hidden" name="_method" value="PUT">
+	<input type="text" name="location" value="<%= @happyhour.location %>">
+	<input type="text" name="capacity" value="<%= @happyhour.capacity %>">
+	<button type="submit">Edit</button>
+</form>
+
+<form action="/happyhours/<%= @happyhour.id %>" method="POST">
+	<input type="hidden" name="_method" value="DELETE">
+	<button type="submit">Delete</button>
+</form>

@@ -1,0 +1,14 @@
+<h1><%= @happyhour.name %></h1>
+
+<p><%= @happyhour.location %></p>
+
+<p>Capacity: <%= @happyhour.capacity %></p>
+
+<p>Attendees:</p>
+<ul>
+<% @happyhour.attendees.each do |a| %>
+	<li><%= a.first %> <%= a.last %></li>
+<% end %>
+</ul>
+
+<a href="/happyhours/<%= @happyhour.id %>/edit">Edit/Delete</a>
